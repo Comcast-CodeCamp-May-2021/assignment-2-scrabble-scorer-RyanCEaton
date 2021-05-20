@@ -56,7 +56,7 @@ function scrabbleScore(word) {
  	for (i = 0; i < word.length; i++) {
      for (item in newPointStructure) {
        if (word[i] === item) {
-         scrabble = (scrabble + Number(newPointStructure[item]));
+         scrabble = (scrabble + newPointStructure[item]);
        }
      }
 
@@ -98,7 +98,7 @@ function transform(transforming) {
   for (let item in transforming) {
     let transformPartOne = transforming[item];
     for (let i = 0; i < transformPartOne.length; i++) {
-      newValues[transformPartOne[i].toLowerCase()] = item;
+      newValues[transformPartOne[i].toLowerCase()] = Number(item);
     }
   }
   return newValues;
