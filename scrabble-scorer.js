@@ -92,6 +92,7 @@ function scorerPrompt() {
 
 function transform(transforming) {
   let newValues = {};
+  newValues[" "] = 0;
     for (let item in transforming) {
       let transformPartOne = transforming[item];
         for (let i = 0; i < transformPartOne.length; i++) {

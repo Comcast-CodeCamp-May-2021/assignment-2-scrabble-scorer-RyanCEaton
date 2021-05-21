@@ -17,7 +17,7 @@ describe("Scrabble Scorer solution", function() {
 		let transformedObj = solution.transform(solution.oldPointStructure);
 		let letterKeys = Object.keys(transformedObj);
 		
-		let lettersEx = /[a-z]/g;
+		let lettersEx = /[a-z ]/g;
 
 		// .every() returns true if each item in the array passes the match
 		let expected = letterKeys.every(function(l) {
