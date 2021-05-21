@@ -52,7 +52,7 @@ function vowelBonusScore(word) {
 
 function scrabbleScore(word) {
 	let scrabble = 0;
-  word = word.toLowerCase();
+  word = word.split(' ').join('').toLowerCase();
  	  for (i = 0; i < word.length; i++) {
       scrabble = scrabble + newPointStructure[word[i]];
     }
@@ -92,7 +92,6 @@ function scorerPrompt() {
 
 function transform(transforming) {
   let newValues = {};
-  newValues[" "] = 0;
     for (let item in transforming) {
       let transformPartOne = transforming[item];
         for (let i = 0; i < transformPartOne.length; i++) {
